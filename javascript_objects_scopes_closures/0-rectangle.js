@@ -1,6 +1,5 @@
 #!/usr/bin/node
-class Rectangle 
-{
+class Rectangle {
     // Constructor and methods can be added here if needed
 }
 
