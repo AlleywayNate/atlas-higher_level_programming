@@ -3,12 +3,11 @@
 const request = require('request');
 
 // Constructing the URL to make a request to the Star Wars API (SWAPI) for film information.
-let url = 'http://swapi.co/api/films/' + process.argv[2];
+const url = 'http://swapi.co/api/films/' + process.argv[2];
 
 // Making a request to the constructed URL.
 // The callback function handles the response.
-request(url, function(error, response, body) {
-
+request(url, function (error, response, body) {
   // If there's an error during the request, it will be captured here.
   // Otherwise, 'error' will be null.
   if (error) {

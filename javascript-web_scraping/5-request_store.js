@@ -4,13 +4,12 @@ const request = require('request');
 
 // Making a request to the URL provided as a command-line argument (process.argv[2]).
 // The callback function handles the response.
-request(process.argv[2], function(error, response, body) {
-  
+request(process.argv[2], function (error, response, body) {
   // If there's no error during the request, enter the block.
   if (!error) {
     // Parse the response body (which is in JSON format) to access its properties.
     const results = JSON.parse(body).results;
-    
+
     // The 'results' array contains information about Star Wars movies.
     // We want to count the number of movies in which the character with ID 18 (i.e., Anakin Skywalker) appears.
     // We use the reduce() function to iterate over each movie in the 'results' array and accumulate the count.

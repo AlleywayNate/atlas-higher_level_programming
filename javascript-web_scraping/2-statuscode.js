@@ -6,8 +6,7 @@ const request = require('request');
 // This code fetches the resource specified by the URL.
 // The 'response' event is emitted when a response is received.
 // The callback function provided to 'on' handles the response.
-request.get(process.argv[2]).on('response', function(response) {
-  
+request.get(process.argv[2]).on('response', function (response) {
   // Logging the status code of the response to the console.
   console.log(`code: ${response.statusCode}`);
 });

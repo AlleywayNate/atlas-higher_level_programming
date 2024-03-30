@@ -11,7 +11,6 @@ const fs = require('fs');
 // process.argv[3] contains the content to write to the file.
 // The third parameter is a callback function to be executed once the writing operation is complete or encounters an error.
 fs.writeFile(process.argv[2], process.argv[3], error => {
-
   // If an error occurred during file writing,
   // it will be captured here. If there's no error, 'error' will be null.
   if (error) {
