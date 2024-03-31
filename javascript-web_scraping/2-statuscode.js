@@ -5,7 +5,7 @@ const request = require('request');
 const url = process.argv[2];
 
 // Making an HTTP GET request to the specified URL
-request(url, function(error, response) {
+request(url, function (error, response) {
   // If there's no error and a response is received
   if (!error && response) {
     // Displaying the status code of the response
