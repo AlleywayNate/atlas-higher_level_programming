@@ -2,7 +2,7 @@
 const request = require('request');
 
 // Function to retrieve and print the title of the Star Wars movie
-function getStarWarsMovieTitle(movieId) {
+function getStarWarsMovieTitle (movieId) {
   // Make a GET request to the Star Wars API endpoint with the provided movie ID
   request(`https://swapi-api.hbtn.io/api/films/${movieId}`, (error, response, body) => {
     if (!error && response.statusCode === 200) {
