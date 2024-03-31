@@ -1,22 +1,29 @@
 #!/usr/bin/node
-// Importing the 'request' module.
 const request = require('request');
 
-// Constructing the URL to make a request to the Star Wars API (SWAPI) for film information.
-const url = 'http://swapi.co/api/films/' + process.argv[2];
+// Function to retrieve and print the title of the Star Wars movie
+function getStarWarsMovieTitle(movieId) {
+  // Make a GET request to the Star Wars API endpoint with the provided movie ID
+  request(`https://swapi-api.hbtn.io/api/films/${movieId}`, (error, response, body) => {
+    if (!error && response.statusCode === 200) {
+      // Parse the response body to extract the movie title
+      const movieData = JSON.parse(body);
+      const movieTitle = movieData.title;
+      // Print the title of the movie
+      console.log(movieTitle);
+    } else {
+      // Print an error message if there was an error or if the response status code is not 200
+      console.error('Error:', error || `Status Code: ${response.statusCode}`);
+    }
+  });
+}
 
-// Making a request to the constructed URL.
-// The callback function handles the response.
-request(url, function (error, response, body) {
-  // If there's an error during the request, it will be captured here.
-  // Otherwise, 'error' will be null.
-  if (error) {
-    console.log(error); // Log the error to the console.
-  } else {
-    // Parse the response body (which is in JSON format) to access its properties.
-    // In this case, we're interested in the 'title' property of the film.
-    // 'body' contains the response body as a string, so we parse it into a JavaScript object using JSON.parse().
-    console.log(error || JSON.parse(body).title);
-    // The above line checks if there was an error during parsing, and if not, it logs the title of the film to the console.
-  }
-});
+// Check if a movie ID is provided as a command-line argument
+if (process.argv.length !== 3 || isNaN(parseInt(process.argv[2]))) {
+  console.error('Usage: node 3-starwars_title.js <movieId>');
+} else {
+  // Get the movie ID from the command-line arguments
+  const movieId = parseInt(process.argv[2]);
+  // Call the function to retrieve and print the movie title
+  getStarWarsMovieTitle(movieId);
+}
