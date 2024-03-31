@@ -26,7 +26,7 @@ request(url, function(error, response, body) {
         console.error(err);
       } else {
         // If no error occurred, printing a success message
-        console.log(`The contents of the webpage have been stored in ${filePath}`);
+        console.log(`${filePath}`);
       }
     });
   }
