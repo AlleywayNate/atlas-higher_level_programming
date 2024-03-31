@@ -1,0 +1,17 @@
+{
+  "name": "javascript-web_scraping",
+  "version": "1.0.0",
+  "description": "This project involved practicing file I/O on Node.js and using the NPM request framework to interact with the [Star Wars](https://swapi.co/), [JSONplaceholder](https://jsonplaceholder.typicode.com), and [Twitter](https://developer.twitter.com/en/docs/api-reference-index) API's.",
+  "main": "0-readme.js",
+  "dependencies": {
+    "jest": "^29.7.0",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
