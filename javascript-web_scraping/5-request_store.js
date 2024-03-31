@@ -26,7 +26,6 @@ request(url, function(error, response, body) {
         console.error(err);
       } else {
         // If no error occurred, printing a success message
-        console.log(`${filePath}`);
       }
     });
   }
