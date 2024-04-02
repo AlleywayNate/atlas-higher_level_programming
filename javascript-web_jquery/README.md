@@ -8,9 +8,9 @@ This project aims to reinforce the understanding of DOM manipulation with jQuery
 
 ## Tasks :page_with_curl:
 
-### 0. No jQuery
+# 0. No jQuery
 * [0-script.js](./0-script.js): This script updates the text color of the HTML tag `HEADER` to red (`#ff0`) using vanilla JavaScript with `document.querySelector`.
-# Explanation of JavaScript Script
+### Explanation of JavaScript Script
 
 The provided JavaScript script manipulates the DOM to change the text color of the `<header>` element to red. Below is the line-by-line explanation:
 
@@ -23,8 +23,21 @@ The provided JavaScript script manipulates the DOM to change the text color of t
 3. `header.style.color = '#FF0000';`
    * This line changes the text color of the selected `<header>` element to red (#FF0000) by directly accessing its `style` property and setting the `color` CSS property to the desired value.
 
-### 1. With jQuery
+# 1. With jQuery
 * [1-script.js](./1-script.js): This script achieves the same functionality as task 0 but uses jQuery instead of vanilla JavaScript.
+### Explanation of JavaScript Script
+
+The provided JavaScript script manipulates the DOM using jQuery to change the text color of the `<header>` element to red. Below is the line-by-line explanation:
+
+1. `$(document).ready(function() {`
+   * This line waits for the document to be fully loaded before executing the provided function.
+
+2. `var headerElement = $('header');`
+   * This line selects the `<header>` element using its tag name 'header' with the jQuery function `$()`. It retrieves the jQuery object representing the selected element and assigns it to the variable `headerElement`.
+
+3. `headerElement.css('color', '#FF0000');`
+   * This line updates the text color of the selected `<header>` element to red (#FF0000) using the `css()` method provided by jQuery. It sets the value of the 'color' CSS property to the specified color code '#FF0000'.
+
 
 ### 2. Click and turn red
 * [2-script.js](./2-script.js): When the user clicks on the tag `DIV#red_header`, this script updates the text color of the HTML tag `HEADER` to red (`#ff0`) using jQuery.
