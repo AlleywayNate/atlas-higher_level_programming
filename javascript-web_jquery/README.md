@@ -56,34 +56,3 @@ before implementing it into our HolbertonBnB project.
   `https://fourtonfish.com/hellosalut/?lang=fr`.
   * Displays the translation in the HTML tag `DIV#hello`.
   * Works when imported in the `HEAD` tag.
-
-* **10. No jQuery - document loaded**
-  * [100-script.js](./100-script.js): JavaScript script that uses `document.querySelector`
-  to update the text color of the HTML tag `HEADER` to red (`#ff0`).
-  * Works when imported in the `HEAD` tag.
-
-* **11. List, add, remove**
-  * [101-script.js](./101-script.js): JavaScript script that uses jQuery to add, remove,
-  and clear `LI` elements from a list based on user click input.
-  * Adds a new element when the user clicks `DIV#add_item`.
-    * Adds `<li>Item</li>` to the HTML tag `UL.my_list`.
-  * Removes the last element when the user clicks `DIV#remove_item`.
-  * Clears all elements when the user clicks `DIV#clear_list`.
-  * Works when imported in the `HEAD` tag.
-
-* **12. Say hello to everybody!**
-  * [102-script.js](./102-script.js): JavaScript script that uses jQuery to fetch and
-  display how to say "Hello" in a given language using the API
-  `https://www.fourtonfish.com/hellosalut/hello/`.
-  * Fetches the translation for the language entered in the HTML tag `INPUT#language_code`.
-  * Fetches the translation when the user clicks on the HTML tag `INPUT#btn_translate`.
-  * Displays the translation in the HTML tag `DIV#hello`.
-  * Works when imported in the `HEAD` tag.
-
-* **13. And press ENTER**
-  * [103-script.js](./103-script.js): JavaScript script that uses jQuery to fetch and
-  display how to say "Hello" in a given language using the API
-  `https://www.fourtonfish.com/hellosalut/hello/`.
-  * Identical to [102-script.js](./102-script.js) except that the tranlsation is fetched
-  when either the user clicks on the HTML tag `INPUT#btn_translate` or presses `ENTER`
-  when hovering over the tag `INPUT#language_code`.
