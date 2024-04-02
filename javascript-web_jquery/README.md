@@ -109,9 +109,9 @@ The provided JavaScript script uses jQuery to manipulate the DOM, specifically t
    * This line selects the `<ul>` element with the class 'my_list' using jQuery's selector syntax `$('ul.my_list')`. It then appends the newly created `<li>` element (`newItem`) to the selected `<ul>` element using the `append()` method. This adds the new list item to the end of the list.
 
 
-### 6. Change the text
+# 6. Change the text
 * [6-script.js](./6-script.js): When the user clicks on the tag `DIV#update_header`, this script updates the text of the HTML tag `HEADER` to "New Header!!!" using jQuery. It effectively changes the header text to a new value.
-# Explanation of JavaScript Script
+### Explanation of JavaScript Script
 
 The provided JavaScript script uses jQuery to manipulate the DOM, specifically to update the text content of the `<header>` element when the user clicks on the `<div>` element with the ID 'update_header'. Below is the line-by-line explanation:
 
